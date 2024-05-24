@@ -4385,7 +4385,8 @@ const docPageTemplate = {
 													children: [
 														{
 															tag: "h4",
-															content: '32 Search Results found for "web development"',
+															content:
+																'<span>32</span> Search Results found for "web development"',
 														},
 													],
 												},

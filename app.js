@@ -150,25 +150,31 @@ const courseLabelInput = document.querySelector("input#course");
 
 // 	console.log(mainContentCards);
 // });
+const noOfCourses = document.querySelector(".main-courses-title h4 span");
+
 let mainCoursesArr = [...mainCourses];
+
+noOfCourses.textContent = mainCoursesArr.length;
+
+let newCourses;
 
 universityLabelInput.addEventListener("click", () => {
 	if (!universityLabelInput.checked) {
-		mainCoursesArr
-			.filter(
-				(mainCourse) =>
-					mainCourse.querySelector(".course-details-cont .course-label.hidden span")
-						.textContent === "University Program"
-			)
-			.forEach((course) => (course.style.display = "none"));
+		newCourses = mainCoursesArr.filter(
+			(mainCourse) =>
+				mainCourse.querySelector(".course-details-cont .course-label.hidden span")
+					.textContent === "University Program"
+		);
+
+		newCourses.forEach((course) => (course.style.display = "none"));
 	} else {
-		mainCoursesArr
-			.filter(
-				(mainCourse) =>
-					mainCourse.querySelector(".course-details-cont .course-label.hidden span")
-						.textContent === "University Program"
-			)
-			.forEach((course) => (course.style.display = "flex"));
+		newCourses = mainCoursesArr.filter(
+			(mainCourse) =>
+				mainCourse.querySelector(".course-details-cont .course-label.hidden span")
+					.textContent === "University Program"
+		);
+
+		newCourses.forEach((course) => (course.style.display = "flex"));
 	}
 });
 
@@ -221,3 +227,6 @@ courseLabelInput.addEventListener("click", () => {
 // 				.textContent === "University Program"
 // 	)
 // 	.forEach((course) => (course.style.display = "none"));
+
+console.log(typeof noOfCourses.textContent);
+// console.log(noOfCourses);
