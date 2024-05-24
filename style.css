@@ -13,6 +13,10 @@
 	--border-color-1: #dde0e6;
 }
 
+.outlined-btn a:hover {
+	background: transparent;
+}
+
 .main-left.outside .cross-icon {
 	display: none;
 }

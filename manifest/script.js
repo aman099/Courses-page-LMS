@@ -4026,7 +4026,7 @@ const docPageTemplate = {
 													attributes: {
 														class: "outlined-btn",
 													},
-													content: "Log in",
+													content: "<a href='https://login-lms.netlify.app/'>Log in</a>",
 												},
 											],
 										},
